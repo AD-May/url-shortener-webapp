@@ -1,0 +1,17 @@
+@mixin dimensions($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin alignFlexItems($direction, $x, $y) {
+    flex-direction: $direction;
+    
+    @if $direction == column {
+        align-items: $x;
+        justify-content: $y;
+    } @else {
+        align-items: $y;
+        justify-content: $x;
+    }
+}
+
