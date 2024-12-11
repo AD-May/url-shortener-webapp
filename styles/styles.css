@@ -10,10 +10,11 @@ body {
 
 .boldFont {
   font-weight: 700;
+  color: hsl(260, 8%, 14%);
 }
 
-p {
-  font-weight: 400;
+.bodyText {
+  font-weight: 500;
   font-size: 18px;
   color: hsl(257, 7%, 63%);
 }
@@ -36,10 +37,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-header i {
-  color: hsl(0, 0%, 75%);
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .imageContainerMobile {
@@ -56,15 +54,28 @@ header i {
      object-fit: cover;
 }
 
-nav {
-  justify-content: space-between;
-  align-items: center;
+.navbarToggle {
+  height: 2rem;
+  width: 2rem;
+  background-color: white;
+  border: none;
+  transition: 0.8s ease-in;
 }
 
-#navigation, #registration {
-  margin: 0;
+#navbarExternalContent {
+  gap: 0.5rem;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
+  transition: 0.3s ease-in-out;
+}
+#navbarExternalContent ul {
   list-style: none;
+  padding-bottom: 1rem;
+}
+
+#navigation {
+  border-bottom: 1px solid hsl(257, 27%, 26%);
 }
 
 .button, .buttonRounded {
@@ -99,13 +110,6 @@ form {
   height: 10rem;
   padding: 0 1.4rem;
   bottom: -5rem;
-  /* input {
-      height: 40%;
-      width: 100%;
-      border: none;
-      border-radius: 10px;
-      padding: 1rem; 
-  } */
 }
 form fieldset {
   background-image: url("images/bg-shorten-mobile.svg");
@@ -126,7 +130,14 @@ form fieldset > * {
   width: 100%;
   border: none;
   border-radius: 10px;
+}
+
+#input {
   padding: 1rem;
+}
+
+#submit-btn {
+  text-align: center;
 }
 
 #statistics {
@@ -160,7 +171,7 @@ form fieldset > * {
 
 .statImgContainer {
   position: relative;
-  display: inline-block;
+  margin: auto;
   background-color: hsl(257, 27%, 26%);
   border-radius: 50%;
   height: 5.6rem;
@@ -169,6 +180,80 @@ form fieldset > * {
 }
 .statImgContainer img {
   transform: translateY(50%);
+}
+
+.line {
+  position: absolute;
+  height: 3.2rem;
+  width: 0.6rem;
+  background-color: hsl(180, 66%, 49%);
+  right: 49%;
+}
+
+#advertisement {
+  height: 18.5rem;
+  background-color: hsl(257, 27%, 26%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background-image: url("images/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#advertisement h3 {
+  color: white;
+}
+
+#footer {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4rem 0 2rem;
+  background-color: hsl(255, 11%, 22%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  color: hsl(0, 0%, 75%);
+  text-align: center;
+}
+#footer p {
+  color: #f0f1f6;
+  margin-bottom: 1.2rem;
+}
+#footer ul {
+  list-style: none;
+  margin-top: 2rem;
+}
+#footer li {
+  margin-bottom: 0.75rem;
+}
+
+.footerLogoColor {
+  fill: #f0f1f6;
+}
+
+#logo-container {
+  background-color: #f0f1f6;
+}
+
+#social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.attribution {
+  font-size: 11px;
+  color: white;
+  margin-top: 2.5rem;
+}
+
+.attribution a {
+  color: hsl(180, 66%, 49%);
 }
 
 @media (max-width: 375px) {
